@@ -1,0 +1,9 @@
+<table>
+  <tr>
+    <td><span style="color:red">{{err}}&nbsp;&nbsp;</span></td>
+    <td><a [routerLink]="['heroes']">Heroes</a></td>
+    <td align="rigth">Termino de Busqueda:</td>
+    <td><input type="text" (keydown.enter)="buscarHeroes(buscarTexto.value)" #buscarTexto /></td>
+    <td><button (click) = "buscarHeroes(buscarTexto.value)">Buscar</button></td>
+  </tr>
+</table>

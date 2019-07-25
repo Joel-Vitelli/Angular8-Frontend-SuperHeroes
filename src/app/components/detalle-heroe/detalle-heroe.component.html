@@ -1,0 +1,46 @@
+<h1>{{heroeDetalle.nombre}}</h1>
+<table>
+  <tr>
+    <td style="font-weight: bold">Nombre:</td>
+    <td>{{heroeDetalle.nombre}}</td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold"></td>
+    <td><img src="{{heroeDetalle.img}}" /></td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold">Poderes:</td>
+    <td>      
+      <ul>
+        <li *ngFor="let poder of heroeDetalle.poderes; let i = index">{{poder}}</li>          
+      </ul>    
+    </td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold">Biografia:</td>
+    <td>
+      {{heroeDetalle.bio}}
+    </td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold">Fecha Aparicion:</td>
+    <td>{{heroeDetalle.aparicion}}</td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold">Casa:</td>
+    <td *ngIf="heroeDetalle.casa == 'DC' ">
+      <img src="assets/img/dc.jpg" />
+    </td>
+    <td *ngIf="heroeDetalle.casa != 'DC' ">
+      <img src="assets/img/marvel.png" />
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <span style="background-color: brown; color:white">
+        <a style="color: white" [routerLink]="['heroes']">VOLVER</a>
+      </span>
+    </td>
+  </tr>
+</table>

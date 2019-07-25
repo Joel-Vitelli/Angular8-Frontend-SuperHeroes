@@ -1,0 +1,28 @@
+<table border="1" style="border-collapse: collapse" width="600px">
+  <tr>
+    <td width="300px" align="center" style="font-weight:bold; font-family:verdana; fontsize:14px; color:green;">
+      {{heroeInput.nombre}}
+    </td>
+    <td width="300px">
+      <b style="color: red">Poderes</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="{{heroeInput.img}}" />
+    </td>
+    <td>
+      <ul>
+        <li *ngFor="let poder of heroeInput.poderes; let i = index">{{poder}}</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="font-weight:bold; font-family:verdana; font-size:12px">
+      <button (click)="verDetalleHeroe(heroeInput.nombre)">VER MAS</button>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<hr/>

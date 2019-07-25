@@ -1,0 +1,8 @@
+<h1>Heroes</h1>
+
+<hr>
+<div class="grid-container">
+      <div class="grid-item" *ngFor="let heroeInput of heroes; let i = index">
+        <app-item-heroe [heroeInput]="heroeInput"></app-item-heroe>
+      </div>
+</div>
